@@ -63,14 +63,14 @@ def asciiParaImagem(arteAscii, fonteTamanho=30):
         y += alturaFonte  # Usa a altura da fonte para avanÃ§ar as linhas corretamente
     
     img_byte_arr = BytesIO()
-    imagem.save(img_byte_arr, format="WEBP")  # Save your image to the byte array as WEBP
+    imagem.save(img_byte_arr, format="PNG")  # Save your image to the byte array as WEBP
     img_byte_arr.seek(0)  # Ensure the buffer's start
 
     # Encode the byte array to base64
     base64_encoded_result = base64.b64encode(img_byte_arr.getvalue()).decode('ascii')
     
     # Format the base64 string for HTML embedding
-    base64_img_html = f"data:image/webp;base64,{base64_encoded_result}"
+    base64_img_html = f"data:image/png;base64,{base64_encoded_result}"
     
     return base64_img_html
 def ImageToAsciiArtImage(UrlImagem):
