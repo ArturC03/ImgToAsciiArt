@@ -56,15 +56,31 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Ensures the content inside also gets clipped to the border radius */
 }
+
 
 #ascii-art {
     height: auto; /* Maintain aspect ratio */
     width: 80%; /* Adjust based on container size or preference */
     max-width: 450px; /* Prevent it from becoming too large */
     border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+    /* Initial state with a smaller glow */
+    box-shadow: 
+        0 0 5px #9bf0e1, /* Close soft glow */
+        0 0 10px #9bf0e1; /* Slightly farther glow */
 }
+
+#ascii-art:hover {
+    /* Hover state with a larger and more intense glow */
+    box-shadow: 
+        0 0 10px #9bf0e1, /* Close soft glow */
+        0 0 20px #9bf0e1, /* Medium glow */
+        0 0 30px #9bf0e1, /* Farther glow */
+        0 0 40px #9bf0e1, /* Farthest glow for a deep space effect */
+        0 0 50px #9bf0e1; /* Most distant glow for added effect */
+}
+
 .content {
      position: relative;
   z-index: 10; /* Ensure this is higher than the canvas' z-index */
