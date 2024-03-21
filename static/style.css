@@ -1,0 +1,127 @@
+body, html {
+    font-family: 'Space Mono', monospace, sans-serif; 
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    background-color: #000;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%; /* Ensure it takes up the necessary width */
+    margin: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 2px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.image-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the content inside also gets clipped to the border radius */
+}
+
+#ascii-art {
+    height: auto; /* Maintain aspect ratio */
+    width: 80%; /* Adjust based on container size or preference */
+    max-width: 450px; /* Prevent it from becoming too large */
+    border-radius: 10px;
+}
+.content {
+     position: relative;
+  z-index: 10; /* Ensure this is higher than the canvas' z-index */
+  color: white;
+  position: relative; /* Isso permite que o z-index seja aplicado */
+  z-index: 2; /* Maior que o z-index do canvas, fazendo com que fique por cima */
+  color: white; /* Garante contraste contra o fundo escuro do efeito Matrix */
+  /* Outros estilos para o seu conteÃºdo */
+}
+
+#stars {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #fff; /* Add a glow effect to simulate the star's twinkle */
+  animation: twinkle 1s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+a {
+  color: #9bf0e1; /* Cool, spacey tone */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold text */
+  transition: color 0.5s ease, transform 0.5s ease, text-shadow 0.5s ease; /* Smooth transitions */
+  animation: pulseBrightness 1.5s infinite alternate; /* Subtle, rapid pulse */
+}
+
+a:hover {
+  color: #d0fff0; /* Lighter shade on hover for contrast */
+  transform: scale(1.1); /* More noticeable scale increase */
+  text-shadow: 0 0 10px #fff, 0 0 20px #9bf0e1, 0 0 30px #9bf0e1, 0 0 40px #9bf0e1, 0 0 50px #9bf0e1; /* Intensely brighter and wider shadow */
+}
+
+@keyframes pulseBrightness {
+  0% {
+    text-shadow: 0 0 2px #333, 0 0 4px #333, 0 0 6px #9bf0e1, 0 0 8px #9bf0e1; /* Lower brightness for start */
+  }
+  100% {
+    text-shadow: 0 0 5px #555, 0 0 10px #555, 0 0 15px #9bf0e1, 0 0 20px #9bf0e1; /* Slightly brighter for the end */
+  }
+}
+
+

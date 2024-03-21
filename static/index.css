@@ -1,0 +1,90 @@
+body, html {
+    font-family: 'Space Mono', monospace, sans-serif; 
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    background-color: #000;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#stars {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #fff; /* Add a glow effect to simulate the star's twinkle */
+  animation: twinkle 1s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+form {
+    display: flex; /* Enable Flexbox within the form */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    gap: 10px; /* Space between input and button */
+    width: 100vw;/* Adjust width to fit its contents */
+    height: 100vh;
+  margin: auto; /* Center form in the viewport */
+    
+}
+
+input[type="text"] {
+  background-color: #0a0a23; /* Dark background */
+  border: 1px solid #5a5d9f; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  color: #9bf0e1; /* Futuristic font color */
+  padding: 10px; /* Padding for text inside input */
+  width: 200px; /* Adjust as needed */
+
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+input[type="text"]:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #9bf0e1; /* Brighter border on focus */
+  box-shadow: 0 0 10px #9bf0e1, 0 0 20px #9bf0e1; /* Glow effect */
+}
+
+button {
+  background-color: #0a0a23; /* Dark background, similar to the input */
+  border: 2px solid #5a5d9f; /* Metallic look */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  color: #9bf0e1; /* Complementary to the input text color */
+  padding: 10px 20px; /* Sizing */
+  font-size: 16px; /* Readable text size */
+  cursor: pointer; /* Cursor effect to indicate it's clickable */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  outline: none; /* Remove default focus outline */
+}
+
+button:hover {
+  background-color: #1c1c3f; /* Slightly lighter background */
+  border-color: #9bf0e1; /* Brighter, spacey border color */
+  box-shadow: 0 0 10px #9bf0e1, 0 0 20px #9bf0e1; /* Intense glow effect */
+  color: #ffffff; /* Brighter text for contrast */
+}
+
+
